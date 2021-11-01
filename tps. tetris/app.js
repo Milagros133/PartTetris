@@ -62,7 +62,7 @@ function moveLeft(){
     draw()
 }
 
-//59:30
+//59:30 a 1:01:16
 //move the tetromino right, unless is at the edge or there is a blockage
 function moveRight(){
     undraw()
@@ -71,7 +71,9 @@ function moveRight(){
     if(!isAtRighEdge) currentPosition +=1
 
     if(current.some(index => squares[currentPosition + index].classList.contains('taken'))){
-        currentPosition
+        currentPosition -=1
     }
+    
+    draw()
 }
 
